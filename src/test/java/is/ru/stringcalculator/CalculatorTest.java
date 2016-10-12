@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class CalculatorTest {
 
-	@test
+	@Test
 	public void testEmptyString() {
 		assertEquals(0, Calculator.add(""));
 	}
