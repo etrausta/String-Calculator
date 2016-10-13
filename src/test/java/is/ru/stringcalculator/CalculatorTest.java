@@ -57,4 +57,9 @@ public class CalculatorTest {
 			System.out.println(ex);
 		}
 	}
+
+	@Test
+	public void testNumbersOver1000() {
+		assertEquals(2, Calculator.add("1001,2"));
+	} 
 }	
