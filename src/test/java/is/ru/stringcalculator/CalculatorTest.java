@@ -32,6 +32,16 @@ public class CalculatorTest {
 
 	@Test
 	public void testNegativeNumber() {
-		assertEquals(2, Calculator.add("-1,2"));
+		RuntimeException ex = null;
+		try
+		{
+			assertEquals(2, Calculator.add("-1,2"));
+		}
+		catch(RuntimeException e)
+		{
+			ex = e;
+			System.out.println(ex);
+		}
+		
 	} 
 }	

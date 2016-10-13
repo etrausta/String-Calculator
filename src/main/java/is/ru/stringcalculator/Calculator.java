@@ -1,5 +1,6 @@
 package is.ru.stringcalculator;
-
+import java.util.*;
+import java.io.*;
 public class Calculator {
 
 	public static int add(String text) {
@@ -25,14 +26,29 @@ public class Calculator {
 	}
 
 	private static int sum (String [] numbers) {
-			int total = 0;
+		List negNum = new ArrayList();
+		int total = 0;
 			for(String number : numbers) {
-				total += toInt(number);
+				int i = toInt(number);
+				if(i < 0)
+				{
+					negNum.add(i);
+				}
+				else
+				{
+					total += i;
+				}
+				
 			}
+			if (negNum.size() > 0)
+			{
+				throwNegativeNumberException(negNum);
+			}
+			
 			return total;
 	}
 
-	public static void throwNegativeNumberException(String numbers) {
-		throw new RuntimeException("Negatives not allowed: " + numbers);
+	public static void throwNegativeNumberException(List numbers) {
+		throw new RuntimeException("Negatives not allowed: " + numbers.toString());
 	}
 }
