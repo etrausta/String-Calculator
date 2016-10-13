@@ -21,4 +21,8 @@ public class Calculator {
 	{
 		return Integer.parseInt(text);
 	}
+
+	private static String [] splitNumbers(String numbers) {
+		return numbers.split(",");
+	}
 }
