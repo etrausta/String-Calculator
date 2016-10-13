@@ -31,4 +31,8 @@ public class Calculator {
 			}
 			return total;
 	}
+
+	public static void throwNegativeNumberException(String numbers) {
+		throw new RuntimeException("Negatives not allowed: " + numbers);
+	}
 }
