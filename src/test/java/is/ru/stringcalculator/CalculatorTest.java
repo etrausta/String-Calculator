@@ -42,6 +42,19 @@ public class CalculatorTest {
 			ex = e;
 			System.out.println(ex);
 		}
-		
-	} 
+	}
+
+	@Test
+	public void testNegativeNumbers() {
+		RuntimeException ex = null;
+		try
+		{
+			assertEquals(5, Calculator.add("2,-4,3,-5"));
+		}
+		catch(RuntimeException e)
+		{
+			ex = e;
+			System.out.println(ex);
+		}
+	}
 }	
