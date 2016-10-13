@@ -62,4 +62,9 @@ public class CalculatorTest {
 	public void testNumbersOver1000() {
 		assertEquals(2, Calculator.add("1001,2"));
 	} 
+
+	@Test
+	public void testDifferentDelimeter() {
+		assertEquals(3, Calculator.add("//;\n1;2"));
+	} 
 }	
