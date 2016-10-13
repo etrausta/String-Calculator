@@ -34,7 +34,7 @@ public class Calculator {
 				{
 					negNum.add(i);
 				}
-				else
+				if(i <= 1000)
 				{
 					total += i;
 				}
