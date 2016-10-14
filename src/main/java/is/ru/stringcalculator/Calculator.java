@@ -4,12 +4,9 @@ import java.io.*;
 public class Calculator {
 
 	public static int add(String text) {
-		String delim = ",";
 		if(text.contains("//"))
 		{
-			delim = text.substring(2,3);
-			text = text.replaceAll(delim, ",");
-			text = text.substring(4);
+			text = differentDelim(text);
 		}
 
 		if(text.equals(""))
@@ -58,5 +55,14 @@ public class Calculator {
 
 	public static void throwNegativeNumberException(List numbers) {
 		throw new RuntimeException("Negatives not allowed: " + numbers.toString());
+	}
+
+	private static String differentDelim(String text)
+	{
+			String delim = ",";
+			delim = text.substring(2,3);
+			text = text.replaceAll(delim, ",");
+			text = text.substring(4);
+			return text;
 	}
 }
