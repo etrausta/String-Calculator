@@ -1,6 +1,7 @@
 package is.ru.stringcalculator;
 import java.util.*;
 import java.io.*;
+
 public class Calculator {
 
 	public static int add(String text) {
